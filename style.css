@@ -81,10 +81,6 @@ body {
   cursor: pointer;
 }
 
-#pages:hover {
-  opacity: 0.5;
-}
-
 #content {
     display: flex;
     flex-direction: column;

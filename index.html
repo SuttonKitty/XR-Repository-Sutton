@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="XR-Repository-Sutton">
+        <meta property="og:description" content="A log for Problem Solving Thru XR Spring.">
+        <meta property="og:image" content="https://suttonkitty.github.io/XR-Repository-Sutton/preview.png">
+        <meta property="og:url" content="https://suttonkitty.github.io/XR-Repository-Sutton/">
+        <meta property="og:type" content="website">
+        <meta name="description" content="A log for Problem Solving Thru XR Spring.">
+        <meta property="og:site_name" content="XR Repository">
+
+        <title>XR-Repository</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="loader">
+            <div class="spinner"></div>
+            <div class="loading-text">world building...</div>
+        </div>
+            
+        <div class="main" hidden>
+            <div>
+                <div id="title">
+                    XR Repository
+                </div>
+
+                <div id="name">
+                    Sutton Fritz (he/him/his)
+                </div>
+            </div>
+
+            <div>
+                ``
+            </div>
+
+            <div id="content">
+                <div>
+                    <b>[Moi]</b>
+                </div>
+
+                <img src="./assets/moi.jpeg" alt="this me!" id="moi">
+                
+                <div id="intro">
+                    Hiiiiiiiii! I am a senior in IDM with a focus in web development. I have no previous experience with Blender, Unreal, or 3D modeling, but I love to learn! I am very familiar with JavaScript with experience in React, p5.js, Leaflet, & vanilla JS. I have recently become interested in game development, so I hope to learn 3D asset creation from this course. In my free time, I enjoy building websites, knitting, hiking, listening to Björk, & playing video games (Dead by Daylight is my fave!).
+                </div>
+
+                <div>
+                    &#12644;
+                </div>
+
+                <div>
+                    <b>[Update Log]</b>
+                </div>
+
+                <!-- <div class="card">
+                        <div id="date">
+                            04.22.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            04.15.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            04.08.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            04.01.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            03.18.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            03.11.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            03.04.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            02.25.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            02.18.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            02.11.2026:
+                        </div>
+
+                        <a href="01272026.html" id="pages">
+                            Hello, World!
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="card">
+                        <div id="date">
+                            01.29.2026:
+                        </div>
+
+                        <a href="01292026.html" id="pages">
+                            Day 1 mind map.
+                        </a>
+                    </div> -->
+
+                    <div class="card">
+                        <div id="date">
+                            Week 1:
+                        </div>
+
+                        <a href="week1.html" id="pages">
+                            First commit.
+                        </a>
+                    </div>
+                
+            </div>
+
+            <a href="https://github.com/SuttonKitty/XR-Repository-Sutton" id="commit">
+                last commit: 02.03.2026
+            </a>
+        </div>
+
+        <script>
+            const loader = document.getElementById("loader");
+            const main = document.getElementById("main");
+            const images = document.images;
+            let loaded = 0;
+
+            function done() {
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.4s ease";
+
+                setTimeout(() => {
+                loader.remove();
+                main.hidden = false;
+                }, 400);
+            }
+
+            if (images.length === 0) done();
+
+            for (const img of images) {
+                if (img.complete) {
+                loaded++;
+                } else {
+                img.addEventListener("load", () => {
+                    loaded++;
+                    if (loaded === images.length) done();
+                });
+                img.addEventListener("error", () => {
+                    loaded++;
+                    if (loaded === images.length) done();
+                });
+                }
+            }
+
+            if (loaded === images.length) done();
+        </script>
+    </body>
+</html>

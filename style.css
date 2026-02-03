@@ -1,0 +1,186 @@
+body {
+    padding: 2rem;
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+    background-color: #F7F7F2;
+    scroll-behavior: smooth;
+    font-size: 1rem;
+    color: #001F3D;
+    cursor: crosshair;
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background-color: #F7F7F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: monospace;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #F7F7F2;
+    border-top: 2px solid #001F3D;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* #title {
+    font-weight: ;
+} */
+
+#name {
+    opacity: 0.5;
+}
+
+.about {
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#moi {
+    width: 100%;
+    height: auto;
+}
+
+#pages {
+  color: #111F35;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  width: fit-content;
+  cursor: pointer;
+}
+
+#pages:hover {
+  opacity: 0.5;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#intro {
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.updates {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1rem;
+}
+
+.date {
+    display: flex;  
+    flex-direction: row;
+    gap: 1rem;
+    opacity: 0.5;
+}
+
+.pics img {
+    width: 100%;
+    border-radius: 0.3rem;
+    filter: drop-shadow(0.5px 0.5px 0.5px gray);
+}
+
+.caption {
+    padding-left: 2rem;
+}
+
+#commit {
+    color: #001F3D;
+    opacity: 0.5;
+    width: fit-content;
+}
+
+
+@media (min-width: 750px) {
+    .main {
+        padding: 10rem 10rem 0 10rem;
+        width: 50%;
+        gap: 3rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .about {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    /* #intro {
+        justify-content: space-between;
+        gap: 1rem;
+    } */
+
+    #moi {
+        width: 50%;
+        filter: drop-shadow(0.5px 0.5px 0.5px gray);
+    }
+
+    #content {
+        text-align: justify;
+        gap: 2rem;
+    }
+    
+    .card {
+        gap: 1rem;
+    }
+
+    .date {
+        gap: 2rem;
+    }
+    
+    .pics img {
+        border-radius: 0.5rem;
+    }
+    
+    .caption {
+        padding-left: 3rem;
+    }
+
+    #commit {
+        padding-top: 10rem;
+    }
+}
